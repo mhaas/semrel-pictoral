@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( BOW )
+find_package( OpenCV REQUIRED )
+find_package(Boost COMPONENTS system filesystem REQUIRED)
+add_executable( BOW bow.cpp )
+target_link_libraries( BOW ${OpenCV_LIBS} ${Boost_LIBRARIES} )
